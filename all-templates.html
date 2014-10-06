@@ -15,11 +15,11 @@ layout: default
 		    <div class="col-md-4">
 
           <div class="thumbnail temp-thumb">
-            <img src="{{ post.preview_image }}" alt="{{ post.title }}">
+            <img src="{{ post.preview_link | append: "preview.jpg" }}" alt="{{ post.title }}">
             <div class="caption">
               <h3>{{ post.title }}</h3>
               <p>{{ post.small_desc }}</p>
-              <p><a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default" role="button">Preview & Download</a></p>
+              <p><a href="{{ post.url }}" class="btn btn-default" role="button">Preview & Download</a></p>
             </div>
           </div>
 

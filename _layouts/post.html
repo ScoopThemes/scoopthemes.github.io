@@ -19,8 +19,8 @@ layout: default
 
 
 	<ol class="breadcrumb">
-	  <li><a href="{{ site.url }}">Home</a></li>
-	  <li><a href="{{ "/all-templates.html" | prepend: site.url }}">Templates</a></li>
+	  <li><a href="/">Home</a></li>
+	  <li><a href="{{ "/all-templates.html" }}">Templates</a></li>
 	  <li class="active">{{ page.title }}</li>
 	</ol>
 
@@ -33,24 +33,24 @@ layout: default
 
 		  <div class="pre-post">
 			<div class="thumbnail">
-				<img src="{{ page.preview_image | prepend: site.url }}" alt="">
+				<img src="{{ page.preview_link | append: "preview.jpg" }}" alt="">
 			</div>
 
 			<ul class="list-inline">
 				<li>
-					<a href="{{ page.preview_link | prepend: site.url }}" target="_blank" class="btn btn-default-2 inverse"><i class="fa fa-eye"></i> Preview</a>
+					<a href="{{ page.preview_link }}" target="_blank" class="btn btn-default-2 inverse"><i class="fa fa-eye"></i> Preview</a>
 				</li>
 				<li>
-					<a href="{{ page.download_link | prepend: site.url }}" class="btn btn-default-2 inverse"><i class="fa fa-download"></i> Download</a>
+					<a href="{{ page.download_link }}" class="btn btn-default-2 inverse"><i class="fa fa-download"></i> Download</a>
 				</li>
 				<li>
-					<a href="{{ page.git_repo }}" class="btn btn-default-2 inverse"><i class="fa fa-github"></i> Github</a>
+					<a href="{{ page.git_repo }}" target="_blank" class="btn btn-default-2 inverse"><i class="fa fa-github"></i> Github</a>
 				</li>
 			</ul>
 
 			<div class="license-author">
 				<h3>License & Author :</h3>
-				<p>License <a href="http://opensource.org/licenses/MIT">MIT</a> . Author <a href="{{ site.author_url }}">{{ site.author }}</a> . {{ page.date | date: "%b %-d, %Y" }}</p>
+				<p>License <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a> . Author <a href="{{ site.author_url }}" target="_blank">{{ site.author }}</a> . {{ page.date | date: "%b %-d, %Y" }}</p>
 			</div>
 
 			<div class="line-divider"></div>
@@ -71,7 +71,6 @@ layout: default
 		        })();
 		    </script>
 		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		  </div>
 
 		  

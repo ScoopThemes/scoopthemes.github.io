@@ -5,8 +5,8 @@ layout: default
 <div class="st-jumbo">
   <div class="st-jumbo-overlay">
     <div class="jumbo-details">
-      <h1 class="jumbo-number">{{ site.title }}</h1>
-      <h3 class="jumbo-md">100% Free Bootstrap HTML Templates & Themes</h3>
+      <h1 class="jumbo-number">Scoop Themes</h1>
+      <h3 class="jumbo-md">100% Free High Crafted Bootstrap HTML Templates & Themes</h3>
       <p>Gesture By <a href="http://www.mshaaban.com" target="_blank">Moe Shaaban</a></p>
       <a href="all-templates.html" class="btn btn-lg btn-default-2"><span class="fa fa-list-alt"></span> Browse Themes & Templates</a>
     </div>
@@ -25,7 +25,7 @@ layout: default
               <div class="col-md-4">
 
                 <div class="thumbnail temp-thumb">
-                  <img src="{{ post.preview_image }}" alt="{{ post.title }}">
+                  <img src="{{ post.preview_link | append: "preview.jpg" }}" alt="{{ post.title }}">
                   <div class="caption">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.small_desc }}</p>

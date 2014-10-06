@@ -20,7 +20,7 @@ layout: default
 
 
 	<ol class="breadcrumb">
-	  <li><a href="{{ site.url }}">Home</a></li>
+	  <li><a href="/">Home</a></li>
 	  <li class="active">{{ page.title }}</li>
 	</ol>
 
@@ -39,8 +39,8 @@ layout: default
      
 	              <div class="col-xs-6">
 						
-						<a href="{{ post.url | prepend: site.baseurl }}" class="thumbnail" role="button">
-							<img src="{{ post.preview_image }}" alt="{{ post.title }}">
+						<a href="{{ post.url }}" class="thumbnail" role="button">
+							<img src="{{ post.preview_link | append: "preview.jpg" }}" alt="{{ post.title }}">
 						</a>
 
 	              </div>

@@ -9,6 +9,17 @@
 
 var appMaster = {
 
+    preLoader: function(){
+        var imageSources = [];
+        $('img').each(function() {
+            var sources = $(this).attr('src');
+            imageSources.push(sources);
+        });
+        if($(imageSources).load()){
+            $('.pre-loader').fadeOut('slow');
+        }
+    },
+
     navSpy: function(){
         /* affix the navbar after scroll below header */
         $('#nav.navbar-static-top').affix({
@@ -56,7 +67,7 @@ var appMaster = {
         var revapi;
         revapi = jQuery('.tp-banner').revolution(
         {
-            delay: 9000,
+            delay: 7000,
             startwidth: 1170,
             startheight: docHeight,
             hideThumbs: 10,
@@ -68,7 +79,14 @@ var appMaster = {
             navigationHAlign: "right",
             navigationVAlign:"bottom",
             navigationHOffset: 80,
-            navigationStyle:"square"
+            navigationStyle:"square",
+            soloArrowLeftHalign:"left",
+            soloArrowLeftValign:"bottom",
+            soloArrowRightHalign:"left",
+            soloArrowRightValign:"bottom",
+            soloArrowLeftVOffset:55,
+            soloArrowRightVOffset:10,
+            dottedOverlay: 'none'
         });
     },
 
@@ -76,11 +94,13 @@ var appMaster = {
         $(window).stellar();
     },
 
-    skillsCircles: function(){
-        $('#myStat1').circliful();
-        $('#myStat2').circliful();
-        $('#myStat3').circliful();
-        $('#myStat4').circliful();
+    skillsChart: function(){
+        $('.chart').easyPieChart({
+            animate: 2000,
+            size: 180,
+            lineWidth:10,
+            barColor: "#22a3df"
+        });
     },
 
     maps: function(){
@@ -99,7 +119,7 @@ var appMaster = {
                 streetViewControl:false,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(31.1997396,29.9194378), // New York
+                center: new google.maps.LatLng(40.869108,-73.892609), // New York
 
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
@@ -229,7 +249,7 @@ var appMaster = {
 
             // Create the Google Map using out element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
-            var myLatlng = new google.maps.LatLng(31.1997396,29.9194378);
+            var myLatlng = new google.maps.LatLng(40.869108,-73.892609);
             var image = {
                 url: '../img/map_pin.png',
                 // This marker is 20 pixels wide by 32 pixels tall.
@@ -275,21 +295,77 @@ var appMaster = {
        $('.scrollpoint.sp-effect4').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');},{offset:'100%'});
        $('.scrollpoint.sp-effect5').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInUp');},{offset:'100%'});
        $('.scrollpoint.sp-effect6').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated bounceIn');},{offset:'100%'});
-       $('.scrollpoint.skills-effect').waypoint(function(){appMaster.skillsCircles();},{offset:'0'});
+    },
+
+    canvasHack: function(){
+        // so non-IE won't freak out in canvasInit
+        var G_vmlCanvasManager; 
+
+        function canvasInit() {
+            var cv = document.createElement('canvas');
+            if (G_vmlCanvasManager != undefined) { // ie IE
+                G_vmlCanvasManager.initElement(cv);
+            }
+
+            if (cv.getContext) {
+                var ctx = cv.getContext('2d');
+            }
+        }
+    },
+
+    ThemeSwitcher: function(){
+        $('.Switcher').on('click', function(){
+            $('.theme-switcher .colors').toggle('fast');
+            $(this).toggleClass('active');
+        });
+
+
+        var blueConfig = function(){
+            $('link[title=mainStyle]').attr('href', 'css/styles-blue.css');
+            $('.navbar-brand img').attr('src','img/logo-blue.png');
+            $('img.ipad-image').attr('src','img/samples/ipad-bl.png');
+            $('img.macbook-image').attr('src','img/samples/macbook-bl.png');
+        }
+        var orangeConfig = function(){
+            $('link[title=mainStyle]').attr('href', 'css/styles-orange.css');
+            $('.navbar-brand img').attr('src','img/logo-orange.png');
+            $('img.ipad-image').attr('src','img/samples/ipad-bl.png');
+            $('img.macbook-image').attr('src','img/samples/macbook-bl.png');
+        }
+        var redConfig = function(){
+            $('link[title=mainStyle]').attr('href', 'css/styles-red.css');
+            $('.navbar-brand img').attr('src','img/logo-red.png');
+            $('img.ipad-image').attr('src','img/samples/ipad-rd.png');
+            $('img.macbook-image').attr('src','img/samples/macbook-rd.png');
+        }
+
+        
+
+        $('.theme-switcher .colors a').on('click', function(){
+
+            var ThisColor = $(this).attr('class');
+
+            switch(ThisColor){
+                case 'blue':
+                    blueConfig();
+                    break;
+                case 'orange':
+                    orangeConfig();
+                    break;
+                case 'red':
+                    redConfig();
+                    break;
+            }
+
+        });
     }
+
 };
 
 
 $(document).ready(function() {
 
-    appMaster.smoothScroll();
-    appMaster.animateScript();
-    appMaster.navSpy();
     appMaster.scollToTop();
-    appMaster.revSlider();
-    appMaster.stellar();
-    
-    appMaster.maps();
-    appMaster.isoTop();
+    appMaster.ThemeSwitcher();
 
 });
