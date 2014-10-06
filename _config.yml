@@ -18,7 +18,7 @@ copyrights: All Copyrights Reserved For ScoopThemes Inc.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 
-url: "scoopthemes.github.io" # the base hostname & protocol for your site
+url: "www.scoopthemes.com" # the base hostname & protocol for your site
 
 twitter_username: ScoopThemes
 github_username:  ScoopThemes
