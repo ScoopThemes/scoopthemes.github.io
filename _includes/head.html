@@ -1,0 +1,34 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+            {% if page.small_desc %} - {{ page.small_desc }}{% else %} - {{ site.site_solgan }}{% endif %}
+    </title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="shortcut icon" href="{{ "/assets/img/favicon.png" | prepend: site.url }}">
+	
+	<link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.url }}">
+	<link rel="stylesheet" href="{{ "/assets/css/font-awesome.min.css" | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/animations.css" | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+    <!-- for Twitter -->          
+    <meta name="twitter:card" content="{% if page.path contains '_posts' %}{{ page.preview_image | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" | prepend: site.url }}{% endif %}">
+    <meta name="twitter:site" content="{{ site.url }}">
+    <meta name="twitter:title" content="{% if page.path contains '_posts' %} Free #Bootstrap {{ page.title }} - {{ page.small_desc }}{% else %} Open Source High Crafted #Bootstrap Templates {{ site.url }} {% endif %}">
+    <meta name="twitter:description" content="{{ page.small_desc }}">
+    <meta name="twitter:creator" content="@ScoopThemes">
+    <meta name="twitter:image:src" content="{% if page.path contains '_posts' %}{{ page.preview_image | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" | prepend: site.url }}{% endif %}">
+    <meta name="twitter:domain" content="{{site.url}}">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>

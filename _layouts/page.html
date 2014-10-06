@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+
+
+<div class="container-fluid page-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<h1>{{ page.title }} <span>— {{ page.small_desc }}</span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+
+	<ol class="breadcrumb">
+	  <li><a href="{{ site.url }}">Home</a></li>
+	  <li class="active">{{ page.title }}</li>
+	</ol>
+
+	<div class="row">
+		<div class="col-md-8">
+			<article>
+				{{ content }}
+			</article>
+		</div>
+		<div class="col-md-4 popular-items">
+			<h2>Popular Templates</h2>
+			
+			<div class="row">
+
+				{% for post in site.categories.popular limit:6 %}
+     
+	              <div class="col-xs-6">
+						
+						<a href="{{ post.url | prepend: site.baseurl }}" class="thumbnail" role="button">
+							<img src="{{ post.preview_image }}" alt="{{ post.title }}">
+						</a>
+
+	              </div>
+
+	            {% endfor %}
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+</div>
+

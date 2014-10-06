@@ -1,0 +1,85 @@
+<header>
+        <nav class="navbar navbar-default main-nav" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ site.url }}"><img src="{{ "/assets/img/logo.png" | prepend: site.url }}" alt="{{ site.title }}"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Templates <i class="fa fa-angle-down"></i> </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{{ "/all-templates.html" | prepend: site.url }}"><i class="fa fa-bullhorn"></i> All Templates and Themes</a></li>
+                  <li><a href="{{ "/popular.html" | prepend: site.url }}"><i class="fa fa-heart"></i> Popular Themes</a></li>
+                </ul>
+              </li>
+              
+              {% for page in site.pages %}
+                {% if page.title %}
+                
+                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+
+                {% endif %}
+              {% endfor %}
+
+              <li>
+                <a href="http://www.getbootstrap.com/" target="_blank">
+                  Bootstrap
+                  <span class="fa fa-external-link"></span></a>
+              </li>
+
+            </ul>
+            <h3 class="navbar-right slogan hidden-xs">
+              We're Just Warming Up <span class="fa fa-bolt"></span>
+            </h3>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!--
+      <nav class="navbar navbar-default sub-nav" role="navigation">
+        <div class="container">
+          <div class="row" id="bs-example-navbar-collapse-2">
+
+          <div class="col-md-12">
+            <div class="dropdown drop-categories pull-left">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                <span class="fa fa-bars"></span>
+                Select a Category
+                <span class="fa fa-angle-down"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Admin & Dashboards</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Landing Pages</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Business & Corporate</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Portfolio</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Resumes & CV</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">E-Commerce</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Blogs & Magazines</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wordpress</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other Stuff</a></li>
+              </ul>
+            </div>
+
+            <h3 class="navbar-right slogan">
+              We're Just Warming Up <span class="fa fa-bolt"></span>
+            </h3>
+
+          </div>
+            
+          </div>
+        </div>
+      </nav>
+      -->
+
+</header>
+

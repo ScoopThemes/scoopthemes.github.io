@@ -1,0 +1,618 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+//Colors
+$brand-primary : 		#6fb9f9;
+$brand-primary-light : 	lighten($brand-primary, 20%);
+$brand-primary-dark : 	#37434D;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$brand-other:			#25a7b4;
+
+//Grays
+$gray-darker:           lighten(#000, 13.5%); // #222
+$gray-dark:             lighten(#000, 20%);   // #333
+$gray:                  lighten(#000, 33.5%); // #555
+$gray-light:            lighten(#000, 60%);   // #999
+$gray-lighter:          lighten(#000, 93.5%); // #eee
+
+//Basic Colors
+$white-color : 			#FFFFFF;
+$black-color: 			#000000;
+
+//Font Styling & Sizing
+$font-stack : 			'Open Sans', Tahoma, Arial;
+
+$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
+$font-size-large:       ceil(($font-size-base * 1.25)); // ~18px
+$font-size-xlarge:      ceil(($font-size-base * 1.79)); // ~25px
+$font-size-small: 		ceil(($font-size-base * 0.85)); // ~12px
+
+$weight-light: 			300;
+$weight-normal: 		400;
+$weight-semibold: 		600;
+$weight-bold: 			700;
+
+$font-size-h1:          floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:          floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:          ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:          ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:          $font-size-base;
+$font-size-h6:          ceil(($font-size-base * 0.85)); // ~12px
+
+
+//For RTL, Use It For Floatation
+$left: left;
+$right: right;
+
+
+//Ready Borders "Define The Average Size Of The Template Borders"
+$border : 1px solid $gray;
+$borderLight : 1px solid $gray-light;
+$borderDark : 1px solid $gray-dark;
+
+
+//For RTL padding-left, padding-right and absolute positioning
+//Always Put A Value For Both "Auto Or Pixels"
+@mixin padding-left-right($pleft : 0px, $pright : 0px){
+	padding-left: $pleft;
+	padding-right: $pright;
+}
+@mixin margin-left-right($mleft : 0px, $mright : 0px){
+	padding-left: $mleft;
+	padding-right: $mright;
+}
+@mixin absolute-left-right($aleft : 0px, $aright : 0px){
+	left: $aleft;
+	right: $aright;
+}
+
+//Mixins
+
+//Primary Color Gradient
+@mixin primaryGrad($gradDeg: 180 , $gradStart: $brand-primary-light , $gradEnd : $brand-primary){
+	/* Old browsers */
+	background: $gradStart;
+	/* FF3.6+ */
+	background: -moz-linear-gradient($gradDeg,  $gradStart 0%, $gradEnd 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$gradStart), color-stop(100%,$gradEnd));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* W3C */
+	background: linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradStart', endColorstr='$gradEnd',GradientType=0 );
+}
+
+
+//Gray Color Gradient
+@mixin grayGrad($gradDeg: 180 , $gradStart: $gray-lighter , $gradEnd : $gray){
+	/* Old browsers */
+	background: $gradStart;
+	/* FF3.6+ */
+	background: -moz-linear-gradient($gradDeg,  $gradStart 0%, $gradEnd 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$gradStart), color-stop(100%,$gradEnd));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* W3C */
+	background: linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradStart', endColorstr='$gradEnd',GradientType=0 );
+}
+
+
+//Border Radius
+@mixin border-radius($radius : 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+//Box Shadow
+@mixin box-shadow($shadow : 0px 1px 3px rgba(0,0,0,.5)) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+
+//Text Shadow
+@mixin text-shadow($tShadow : 0px 1px 3px rgba(0,0,0,.5)) {
+	-webkit-box-shadow: $tShadow;
+	-moz-box-shadow: $tShadow;
+	-o-box-shadow: $tShadow;
+	box-shadow: $tShadow;
+}
+
+
+//Transition
+@mixin transition($transitionvalue : all .25s ease-in-out){
+	-webkit-transition:$transitionvalue;
+	-o-transition:$transitionvalue;
+	-moz-transition:$transitionvalue;
+	transition:$transitionvalue;
+}
+
+@mixin transparent($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+.backgroundCover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// my mixins for this template 
+
+
+// styling starts from here
+
+body{
+	font-family:$font-stack;
+	font-size:14px;
+	font-weight:$weight-normal;
+}
+.drop-categories{
+	display: inline-block;
+	margin-right: 10px;
+	padding-top: 8px;
+}
+
+.container{
+	
+}
+.navbar{
+	margin-bottom:0;
+}
+.social-head{
+
+}
+.st-jumbo{
+	height:400px;
+	background:url('../img/bg1.jpg') no-repeat center center;
+	background-size: cover;
+	.st-jumbo-overlay{
+		width: 100%;
+		height: 400px;
+		background:rgba(0,17,35,.8);
+	}
+	.jumbo-details{
+		position: absolute;
+		color: #fff;
+		text-align: center;
+		width:100%;
+	}
+	p{
+		font-weight: $weight-light;
+	}
+	.jumbo-number{
+		font-size: 70px;
+		font-weight: $weight-light;
+		margin-bottom: 30px;
+		margin-top: 75px;
+		color:$white-color;
+	}
+	.jumbo-md{
+		font-size: 25px;
+		width: 800px;
+		text-transform: capitalize;
+		font-weight: $weight-light;
+		margin: 0 auto;
+		color:$white-color;
+		margin-bottom: 10px;
+	}
+	.btn{
+		margin-top: 25px;
+	}
+}
+.jumbo-buttons{
+	.btn-big{
+		background:$brand-primary;
+		padding-top:15px;
+		padding-bottom:15px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		font-weight: $weight-light;
+		text-transform: capitalize;
+	}
+}
+.navbar{
+	@include border-radius(0);
+	&.navbar-default{
+		background:$brand-primary;
+		border:none;
+		padding-top:10px;
+		padding-bottom: 10px;
+		
+		&.main-nav{
+			.navbar-nav{
+				> li{
+					> a{
+						color: $white-color;
+						&:hover{
+							color:$brand-primary-light;
+							@include transition();
+						}
+					}
+				}
+			}
+		}
+		&.sub-nav{
+			background-image:none;
+			background:$white-color;
+			border:none;
+			border-top:2px solid darken($brand-primary, 11%);
+		}
+	}
+	.navbar-form{
+		margin-top: 8px;
+		margin-bottom:8px;
+	}
+	.navbar-nav{
+		>li{
+			>a{
+				padding-top:30px;
+				padding-bottom:30px;
+			}
+		}
+	}
+	.navbar-brand{
+		padding-top:15px;
+		padding-bottom:15px;
+		height: 80px;
+		img{
+			width: auto;
+			height: 50px;
+		}
+	}
+}
+.btn{
+	font-size:14px;
+	@include border-radius(0);
+	&.btn-default-2{
+		border:1px solid $white-color;
+		color:$white-color;
+		font-weight: $weight-light;
+		.fa{
+			margin-right: 10px;
+		}
+		&:hover{
+			background:darken($brand-primary, 10%);
+			@include transition();
+		}
+		&.inverse{
+			color:$gray;
+			border-color:$gray;
+			font-weight: $weight-normal;
+			&:hover{
+				color:$white-color;
+				border-color:$brand-primary;
+			}
+			&.boldy{
+				color:darken($brand-primary, 10%);
+				border-color:darken($brand-primary, 10%);
+				&:hover{
+					color:$white-color;
+				}
+			}
+		}
+	}
+}
+.form-control{
+	@include border-radius(0);
+	font-weight:$weight-light;
+}
+.dropdown-menu{
+	@include border-radius(0);
+	li{
+		a{
+			&:hover,
+			&:focus{
+				background-color:$brand-primary;
+			}
+		}
+	}
+}
+.section-heading{
+	margin-bottom:20px;
+	small{
+		font-weight: $weight-light;
+		font-size: 18px;
+	}
+}
+.thumbnail{
+	@include border-radius(0);
+	background:url('../img/dots.png') repeat;
+	text-align :center;
+	.btn{
+		margin-top: 15px;
+	}
+	&:hover{
+		border-color:$brand-primary !important;
+	}
+	&.temp-thumb{
+		img{
+			border:1px solid $gray-lighter;
+			&:hover{
+				opacity: .9;
+				@include transition();
+			}
+		}
+		.btn-default{
+			background:$white-color;
+			background-image:none;
+			color:$gray;
+			border-color:$gray;
+		}
+	}
+}
+.align-center{
+	text-align:center;
+}
+.btn-center{
+	padding-top:25px;
+	padding-bottom:10px;
+}
+
+.line-divider{
+	text-align:center;
+	&:after{
+		content: "";
+		display: inline-block;
+		margin: 30px auto;
+		height: 1px;
+		width:100px;
+		background:lighten($gray, 30%);
+	}
+}
+.st-newsletter{
+	padding: 90px 0;
+	background: url('../img/svg-background.svg') right bottom;
+	background-size:cover;
+	color:$white-color;
+	small{
+		margin-bottom: 20px;
+	}
+	h3{
+		color:$white-color;
+		margin-top: 0;
+	}
+	.btn-default{
+		background: darken($brand-primary, 10%);;
+		&:hover{
+			background: $brand-primary;
+			@include transition();
+		}
+	}
+	.subscribe.form-control{
+		display: inline-block;
+		width:70%;
+		
+		line-height: 2.68em;
+		border:none;
+	}
+	.btn{
+		float: left;
+		margin-left: 5px;
+		border:none;
+	}
+	.form-group{
+		display: block;
+		margin-top: 20px;
+		.input-group{
+			display: block;
+		}
+	}
+}
+
+
+
+footer{
+	background: $brand-primary-dark;
+	padding:25px 0;
+	color:$white-color;
+	a{
+		color:$brand-primary;
+		&:hover{
+			color:$white-color;
+			@include transition();
+			text-decoration: none;
+		}
+	}
+	.line-divider:after{
+		margin:10px 0;
+	}
+}
+footer img{
+	&.gh-logo{
+		width:100px;
+	}
+}
+.right-align{
+	text-align:right;
+}
+
+
+.page-heading{
+	background: url('../img/svg-background.svg') right bottom;
+	margin-bottom:30px;
+	@include box-shadow(0px 1px 4px rgba(0,0,0,.1));
+	.page-header{
+		border-bottom: 0;
+		h1{
+			color:$white-color;
+			span{
+				color:$gray-lighter;
+				font-size:26px;
+			}
+		}
+	}
+}
+.breadcrumb{
+	border:1px solid $gray-lighter;
+	@include border-radius(0);
+	a{
+		color:darken($brand-primary, 10%);
+	}
+}
+.post-content{
+	p{
+		line-height: 1.45em;
+	}
+	color: $black-color;
+	li{
+		padding-bottom:5px;
+	}
+	
+}
+.tags{
+	li{
+		padding-left:0;
+		padding-right:3px;
+	}
+	span{
+		display: inline-block;
+		padding:3px 10px;
+		color:$white-color;
+		background:$brand-primary-dark;
+		font-size: 11px;
+		@include border-radius(2px);
+	}
+}
+.comments{
+	margin-bottom: 30px;
+}
+.license-author{
+	margin-top:30px;
+}
+.copyrights{
+	text-align:center;
+	font-weight:$weight-light;
+}
+.twitter{
+	.fa-circle{
+		color: #55ACEE;
+	}
+}
+.facebook{
+	.fa-circle{
+		color: #3B5998;
+	}
+}
+.google{
+	.fa-circle{
+		color: #CB4437;
+	}
+}
+.github{
+	.fa-circle{
+		color: #1a1a1a;
+	}
+}
+.contact-us{
+	p{
+		font-size:1.52rem;
+		line-height: 1.45em;
+		padding-bottom:20px;
+	}
+	h2{
+		margin-bottom: 25px;
+	}
+}
+
+article{
+	h2{
+		margin-bottom: 25px;
+	}
+	p{
+		font-size:1.52rem;
+		line-height: 1.45em;
+		padding-bottom:10px;
+		color:$gray;
+	}
+}
+.slogan{
+	margin:20px 0 0;
+	color:$white-color;
+	border-bottom:2px solid $white-color;
+	padding-bottom:10px;
+}
+.popular-items{
+	h2{
+		margin-bottom: 30px;
+	}
+}
+
+.result{
+  position: fixed;
+  top:0px;
+  padding: 7px 10px 7px 20px;
+  left:auto;
+  right:0px;
+  color: #fff;
+}
+.result.success{
+  background: #2ecc71;
+}
+.result.error{
+  background: #2c3e50;
+}
+.result span{
+  margin-left: 10px;
+}
+.result.error span{
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+
+<div class="container-fluid page-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<h1>{{ page.title }} <span>— {{ page.small_desc }}</span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+
+	<ol class="breadcrumb">
+	  <li><a href="{{ site.url }}">Home</a></li>
+	  <li><a href="{{ "/all-templates.html" | prepend: site.url }}">Templates</a></li>
+	  <li class="active">{{ page.title }}</li>
+	</ol>
+
+<div class="row">
+	<div class="col-md-7">
+
+	
+
+		<div class="post">
+
+		  <div class="pre-post">
+			<div class="thumbnail">
+				<img src="{{ page.preview_image | prepend: site.url }}" alt="">
+			</div>
+
+			<ul class="list-inline">
+				<li>
+					<a href="{{ page.preview_link | prepend: site.url }}" target="_blank" class="btn btn-default-2 inverse"><i class="fa fa-eye"></i> Preview</a>
+				</li>
+				<li>
+					<a href="{{ page.download_link | prepend: site.url }}" class="btn btn-default-2 inverse"><i class="fa fa-download"></i> Download</a>
+				</li>
+				<li>
+					<a href="{{ page.git_repo }}" class="btn btn-default-2 inverse"><i class="fa fa-github"></i> Github</a>
+				</li>
+			</ul>
+
+			<div class="license-author">
+				<h3>License & Author :</h3>
+				<p>License <a href="http://opensource.org/licenses/MIT">MIT</a> . Author <a href="{{ site.author_url }}">{{ site.author }}</a> . {{ page.date | date: "%b %-d, %Y" }}</p>
+			</div>
+
+			<div class="line-divider"></div>
+
+		  </div>
+
+		  <div class="comments">
+		  	<div id="disqus_thread"></div>
+		    <script type="text/javascript">
+		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		        var disqus_shortname = 'scoopthemes'; // required: replace example with your forum shortname
+
+		        /* * * DON'T EDIT BELOW THIS LINE * * */
+		        (function() {
+		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		        })();
+		    </script>
+		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		  </div>
+
+		  
+
+		</div>
+
+	</div>
+	
+	<div class="col-md-5">
+		<article class="post-content">
+			
+			{{ content }}
+
+			<h3>Spread it</h3>
+			<ul class="list-inline">
+				<li><a class="twitter-share-button" href="{{post.url}}" data-url="{{ post.url }}" >Tweet</a></li>
+				<li><div class="g-plus" data-action="share"></div></li>
+			</ul>
+
+			<h3>Tags</h3>
+			<ul class="list-inline tags">
+				{% for tags in page.tags %}
+					<li><span>{{ tags }}</span></li>
+				{% endfor%}
+			</ul>
+
+		</article><!-- /.post-content -->
+	</div>
+
+</div>
+	
+
+
+
+</div>
+
