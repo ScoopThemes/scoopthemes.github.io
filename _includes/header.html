@@ -9,7 +9,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ site.url }}"><img src="{{ "/assets/img/logo.png" | prepend: site.url }}" alt="{{ site.title }}"></a>
+            <a class="navbar-brand" href="{{ site.url }}"><img src="/assets/img/logo.png" alt="{{ site.title }}"></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,15 +19,15 @@
               <li class="dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Templates <i class="fa fa-angle-down"></i> </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="{{ "/all-templates.html" | prepend: site.url }}"><i class="fa fa-bullhorn"></i> All Templates and Themes</a></li>
-                  <li><a href="{{ "/popular.html" | prepend: site.url }}"><i class="fa fa-heart"></i> Popular Themes</a></li>
+                  <li><a href="all-templates.html"><i class="fa fa-bullhorn"></i> All Templates and Themes</a></li>
+                  <li><a href="popular.html"><i class="fa fa-heart"></i> Popular Themes</a></li>
                 </ul>
               </li>
               
               {% for page in site.pages %}
                 {% if page.title %}
                 
-                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 
                 {% endif %}
               {% endfor %}

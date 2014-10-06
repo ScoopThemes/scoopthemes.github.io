@@ -8,21 +8,21 @@
     </title>
     <meta name="description" content="{{ site.description }}">
 
-    <link rel="shortcut icon" href="{{ "/assets/img/favicon.png" | prepend: site.url }}">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
 	
-	<link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.url }}">
-	<link rel="stylesheet" href="{{ "/assets/css/font-awesome.min.css" | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/animations.css" | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
 
     <!-- for Twitter -->          
-    <meta name="twitter:card" content="{% if page.path contains '_posts' %}{{ page.preview_image | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" | prepend: site.url }}{% endif %}">
+    <meta name="twitter:card" content="{% if page.path contains '_posts' %}{{ page.preview_image | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" }}{% endif %}">
     <meta name="twitter:site" content="{{ site.url }}">
     <meta name="twitter:title" content="{% if page.path contains '_posts' %} Free #Bootstrap {{ page.title }} - {{ page.small_desc }}{% else %} Open Source High Crafted #Bootstrap Templates {{ site.url }} {% endif %}">
     <meta name="twitter:description" content="{{ page.small_desc }}">
     <meta name="twitter:creator" content="@ScoopThemes">
-    <meta name="twitter:image:src" content="{% if page.path contains '_posts' %}{{ page.preview_image | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" | prepend: site.url }}{% endif %}">
+    <meta name="twitter:image:src" content="{% if page.path contains '_posts' %}{{ page.preview_image }}{% else %}{{ "/assets/img/logo_blue.png" }}{% endif %}">
     <meta name="twitter:domain" content="{{site.url}}">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
