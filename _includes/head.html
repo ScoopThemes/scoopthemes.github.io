@@ -27,7 +27,7 @@
     <!-- for Facebook -->          
     <meta property="og:title" content="{% if page.path contains '_posts' %} {{ page.title }} - {{ page.small_desc }}{% else %} Open Source High Crafted #Bootstrap Templates {{ site.url }} {% endif %}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="{% if page.path contains '_posts' %}{{ page.preview_link | append: "preview.jpg" | prepend: site.url | prepend: "http://" }}{% else %}{{ "/assets/img/logo_blue.png" }}{% endif %}" />
+    <meta property="og:image" content="{% if page.path contains '_posts' %}{{ page.preview_link | append: "preview.jpg" | prepend: site.url | prepend: "http://" }}{% else %}{{ "/assets/img/logo_blue.png" | prepend: site.url | prepend: "http://" }}{% endif %}" />
     <meta property="og:url" content="{{page.url}}" />
     <meta property="og:description" content="{{ page.description }}" />
     
