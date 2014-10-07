@@ -11,7 +11,7 @@ We are here to help in any way we can, Please send you question or anything you 
 
 <p class="text-warning">* Please respect that this email is for general questions only, Please use Github's issue system for any technical quotations. Thank you.</p>
 
-Contact Email : <a href="mailto:help@scoopthemes.com">help@scoopthemes.com</a>
+Contact Email : <a href="mailto:support@scoopthemes.com">support@scoopthemes.com</a>
 
 ## Follow us ##
 
