@@ -25,7 +25,7 @@
 
     <meta name="twitter:description" content="{{ page.small_desc }}">
 
-    <meta name="twitter:image" content="{% if page.path contains '_posts' %}{{ page.preview_link | append: "preview.jpg" | prepend: site.url }}{% else %}{{ "/assets/img/logo_blue.png" }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.path contains '_posts' %}{{ page.preview_link | append: "preview.jpg" | prepend: site.url | prepend: "http://" }}{% else %}{{ "/assets/img/logo_blue.png" }}{% endif %}">
 
     <meta name="twitter:url" content="{{page.url}}">
     
