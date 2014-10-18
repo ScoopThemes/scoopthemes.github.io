@@ -4,7 +4,7 @@ title: ScoopThemes
 author: Moe Shaaban
 author_url: http://www.twitter.com/mshaaban0
 
-permalink: /templates/:year/:month/:day/:title/
+permalink: /templates/:title/
 
 email: support@scoopthemes.com
 
