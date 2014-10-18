@@ -15,7 +15,9 @@ layout: default
 		    <div class="col-md-4">
 
           <div class="thumbnail temp-thumb">
-            <img src="{{ post.preview_link | append: "preview.jpg" }}" alt="{{ post.title }}">
+            <a href="{{ post.url }}">
+              <img src="{{ post.preview_link | append: "preview.jpg" }}" alt="{{ post.title }}">
+            </a>
             <div class="caption">
               <h3>{{ post.title }}</h3>
               <p>{{ post.small_desc }}</p>
