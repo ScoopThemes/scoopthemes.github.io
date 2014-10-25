@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
             {% if page.small_desc %} - {{ page.small_desc }}{% else %} - {{ site.site_solgan }}{% endif %}
     </title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="shortcut icon" href="/assets/img/favicon.png">
 	
@@ -14,7 +14,12 @@
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/animations.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+
     <link rel="canonical" href="{{ page.url }}">
+
+    <!-- For Google -->
+    <link rel="author" href="https://plus.google.com/+Scoopthemes">
+    <link rel="publisher" href="https://plus.google.com/+Scoopthemes">
 
     <!-- for Twitter -->          
     <meta name="twitter:card" content="photo">
