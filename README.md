@@ -1,9 +1,8 @@
----
-layout: page
-title: License
-permalink: /license/
-small_desc: Terms of use
----
+## Scoop Themes
+
+Open Source [Bootstrap 3](http://getbootstrap.com) Free Themes and Templates
+To check more of our open source templates and themes [http://scoopthemes.com](http://scoopthemes.com){:target="_blank"}.
+Follow us on twitter and stay tuned [@ScoopThemes](https://twitter.com/ScoopThemes){:target="_blank"}.
 
 ## Copyright and License ##
 
@@ -20,9 +19,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 All demos and examples, whether in a code project's repository or displayed on a Scoop Themes site, are released under the terms of [CC0](http://en.wikipedia.org/wiki/Creative_Commons_license){:target="_blank"}.
 
 CC0 is even more permissive than the MIT license, allowing you to use the code in any manner you want, without any copyright headers, notices, or other attribution.
-
-## Privacy and Policy ##
-
-Scoop Themes does not share personal information of any kind with anyone. We will not sell or rent your name or personal information to any third party. We DO NOT sell, rent or provide outside access to our mailing list or any data we store on this site. Any data that a user stores via our facilities is wholly owned by that user or business. At any time a user or business is free to take their data and leave, or to simply delete their data from our facilities.
-
-<span></span>
