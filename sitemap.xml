@@ -1,0 +1,31 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  	<url>
+  		<loc>http://scoopthemes.com</loc>
+  		<priority>1.00</priority>
+  	</url>
+
+	{% for post in site.posts limit:10 %}
+		<url>
+		   <loc>http://scoopthemes.com{{ post.url }}</loc>
+		   <image:image>
+		     <image:loc>http://scoopthemes.com{{ post.preview_link | append: "preview.jpg" }}</image:loc>
+		   </image:image>
+		   <image:title>{{ post.title }}</image:title>
+		   <priority>.80</priority>
+		 </url>
+    {% endfor %}
+
+    {% for page in site.pages limit:10 %}
+		<url>
+		   <loc>http://scoopthemes.com{{ page.url }}</loc>
+		</url>
+    {% endfor %}
+
+  
+</urlset>

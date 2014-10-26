@@ -17,6 +17,7 @@ site_solgan: Free Bootstrap Templates and Themes
 copyrights: All Copyrights Reserved For ScoopThemes Inc.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
+#highlighter: rouge
 
 url: "www.scoopthemes.com" # the base hostname & protocol for your site
 
