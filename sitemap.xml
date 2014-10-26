@@ -15,8 +15,8 @@ layout: null
 		   <loc>http://scoopthemes.com{{ post.url }}</loc>
 		   <image:image>
 		     <image:loc>http://scoopthemes.com{{ post.preview_link | append: "preview.jpg" }}</image:loc>
+		     <image:title>{{ post.title }}</image:title>
 		   </image:image>
-		   <image:title>{{ post.title }}</image:title>
 		   <priority>.80</priority>
 		 </url>
     {% endfor %}
