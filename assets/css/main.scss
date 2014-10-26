@@ -215,12 +215,13 @@ body{
 	}
 	p{
 		font-weight: $weight-light;
+		margin-bottom: 10px;
 	}
 	.jumbo-number{
-		font-size: 70px;
+		font-size: 60px;
 		font-weight: $weight-light;
-		margin-bottom: 30px;
-		margin-top: 75px;
+		margin-bottom: 40px;
+		margin-top: 40px;
 		color:$white-color;
 	}
 	.jumbo-md{
@@ -639,6 +640,17 @@ article{
 		}
 
 	}
+}
+
+.github-follow{
+	height:20px;
+	width:80px;
+	border:none;
+}
+.github-fork{
+	width:105px;
+	height:20px;
+	border:none;
 }
 
 
