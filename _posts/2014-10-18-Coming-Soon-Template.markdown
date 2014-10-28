@@ -17,13 +17,13 @@ preview_link: "/templates/Coming-Soon/"
 
 git_repo: "https://github.com/ScoopThemes/coming-soon.git"
 
-description: "Free Beautiful animated Bootstrap coming soon template page with a catchy design ready & integrated with mailchimp."
+description: "Free Beautiful animated Bootstrap coming soon template page with a catchy design, SEO ready & integrated with mailchimp."
 ---
 
 
 ### Discription ###
 
-Beautiful animated coming soon page with a catchy design ready & integrated with mailchimp.
+Beautiful animated coming soon page with a catchy design, SEO ready & integrated with mailchimp.
 
 ### Features ###
 
