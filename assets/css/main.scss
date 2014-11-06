@@ -568,8 +568,20 @@ article{
 .slogan{
 	margin:20px 0 0;
 	color:$white-color;
-	border-bottom:2px solid $white-color;
 	padding-bottom:10px;
+	text-align:right;
+	form{
+		&:after{
+			content: "";
+			display: block;
+			clear:both;
+			height: 0;
+		}
+	}
+	input[type=image]{
+		display: inline-block;
+		float: right;
+	}
 }
 .popular-items{
 	h2{
