@@ -1,0 +1,29 @@
+{
+  "name": "Sidebar",
+  "version": "0.1.0",
+  "authors": [
+    "Scoop Themes http://scoopthemes.com"
+  ],
+  "description": "Sidebar Layout Web Starter Template By Scoop Themes",
+  "main": "index.html",
+  "keywords": [
+    "WebStarter",
+    "Free",
+    "Bootstrap",
+    "Templates"
+  ],
+  "license": "CC0",
+  "homepage": "http://scoopthemes.com/templates/sidebar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "fontawesome": "~4.2.0",
+    "jquery": "~2.1.1"
+  }
+}
