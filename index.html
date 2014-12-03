@@ -5,20 +5,21 @@ layout: default
 <div class="st-jumbo">
   <div class="st-jumbo-overlay">
     <div class="jumbo-details">
-      <h1 class="jumbo-number">Open Source</h1>
+      <h1 class="jumbo-number">Welcome To Scoop Themes !</h1>
       <h3 class="jumbo-md">100% Free Premium Bootstrap HTML Templates & Themes</h3>
-      <p>Gesture By <a href="http://www.mshaaban.com" target="_blank">Moe Shaaban</a></p>
+      <p>Different Open Source Dev Stuff Like Premium Ones</p>
       <div>
             
-            <a class="twitter-share-button"
+            <a class="twitter-share-button mshead-btn"
               href="{{ site.url }}"
-              data-count="true">
+              data-count="none"
+              style="margin-right:20px;">
             Tweet
             </a>
 
-            <iframe src="http://ghbtns.com/github-btn.html?user={{ site.github_username }}&amp;repo=scoopthemes.github.io&amp;type=watch&amp;count=true"  class="github-follow" ></iframe>
+            <iframe src="http://ghbtns.com/github-btn.html?user={{ site.github_username }}&amp;repo=scoopthemes.github.io&amp;type=watch&amp;count=false"  class="github-follow mshead-btn"></iframe>
 
-            <script id='fb4w2wu'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=scoopthemes&button=compact&url=http%3A%2F%2Fscoopthemes.com';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb4w2wu');</script>
+            <a href="https://flattr.com/submit/auto?user_id=scoopthemes&url=https%3A%2F%2Fflattr.com%2Fprofile%2Fscoopthemes" style="display:inline-flex;" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" ></a>
       </div>
       <div class="home-ad">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=scoopthemes" id="_carbonads_js"></script>
@@ -106,3 +107,21 @@ layout: default
         </div>
       </div>
     </div>
+
+
+<script>
+  $(document).ready(function() {
+    $('.navbar-default').addClass('navbar-fixed-top').css('background', 'none');
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+
+       //>=, not <=
+      if (scroll >= 100) {
+          //clearHeader, not clearheader - caps H
+          $(".navbar-default").css('background', '#55ACF7').addClass('scrolling');
+      }else{
+          $('.navbar-default').css('background', 'none').removeClass('scrolling');
+      }
+    }); //missing );
+  });
+</script>
