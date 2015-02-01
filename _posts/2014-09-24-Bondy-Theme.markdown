@@ -11,7 +11,7 @@ categories: one-page landing-page featured popular
 
 tags: bootstrap css3 landing-page one-page bootstrap3 html5
 
-download_link: "/downloads/bondy.zip"
+download_link: "/downloads/Bondy.zip"
 
 preview_link: "/templates/bondy/"
 
