@@ -12,18 +12,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.png">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
     
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <!-- Bootstrap 3.3.2 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
 
-    <link rel="stylesheet" href="css/berry.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+    <style>
+        .home-ad{
+            position: fixed;
+            right: 20px;
+            top:200px;
+            border: 1px solid #f2f2f2;
+            background: rgb(255, 255, 255);
+            border-radius: 0;
+            z-index: 9999;
+        }
+        .home-ad .close{
+            float: right;
+            color: #FFF;
+            background: #6B6B6B;
+            width: 20px;
+            height: 20px;
+            line-height: 16px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: none;
+            margin-bottom: 5px;
+        }
+        .home-ad div#carbonads {
+              padding: 10px;
+              max-width: 150px;
+        }
+        .home-ad div#carbonads a.carbon-img {
+            display: inline-block;
+            float: left; 
+        }
+        .home-ad div#carbonads .carbon-wrap:after {
+            content: "";
+            display: block;
+            clear: both; 
+        }
+        .home-ad div#carbonads .carbon-text {
+            font-size: 12px;
+            text-align: left;
+            color: #333;
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            clear: both;
+        }
+        .home-ad div#carbonads .carbon-text:hover {
+            text-decoration: none; 
+        }
+        .home-ad div#carbonads .carbon-poweredby {
+            font-size: 75%;
+            color: #bebebe; 
+        }
+    </style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,10 +88,16 @@
 </head>
 
 <body>
+    
+    <div class="home-ad">
+        <a href="javascript:void(0)" class="close">x</a>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=scoopthemes" id="_carbonads_js"></script>
+    </div>
+
 
     <div class="pre-loader">
         <div class="load-con">
-            <img src="img/berry/logo.png" class="animated fadeInDown" alt="">
+            <img src="assets/img/berry/logo.png" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
@@ -54,7 +116,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="index.html">
-                            <img src="img/berry/logo.png" alt="" class="logo">
+                            <img src="assets/img/berry/logo.png" alt="" class="logo">
                         </a>
                     </div>
 
@@ -91,7 +153,7 @@
                     <!-- SLIDE  -->
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                         <!-- MAIN IMAGE -->
-                        <img src="img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption lfl fadeout hidden-xs"
@@ -102,7 +164,7 @@
                             data-speed="500"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/berry/Slides/hand-berry.png" alt="">
+                            <img src="assets/img/berry/Slides/hand-berry.png" alt="">
                         </div>
 
                         <div class="tp-caption lfl fadeout visible-xs"
@@ -113,7 +175,7 @@
                             data-speed="500"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/berry/iphone-berry.png" alt="">
+                            <img src="assets/img/berry/iphone-berry.png" alt="">
                         </div>
 
                         <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
@@ -137,7 +199,7 @@
                     <!-- SLIDE 2 -->
                     <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
                         <!-- MAIN IMAGE -->
-                        <img src="img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption lfb fadeout hidden-xs"
@@ -148,7 +210,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/berry/Slides/berry-slide2.png" alt="">
+                            <img src="assets/img/berry/Slides/berry-slide2.png" alt="">
                         </div>
 
                         
@@ -162,7 +224,7 @@
                     <!-- SLIDE 3 -->
                     <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
                         <!-- MAIN IMAGE -->
-                        <img src="img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption customin customout hidden-xs"
@@ -175,7 +237,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/berry/Slides/family-berry.png" alt="">
+                            <img src="assets/img/berry/Slides/family-berry.png" alt="">
                         </div>
 
                         <div class="tp-caption customin customout visible-xs"
@@ -188,7 +250,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/berry/Slides/family-berry.png" alt="">
+                            <img src="assets/img/berry/Slides/family-berry.png" alt="">
                         </div>
 
                         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
@@ -276,7 +338,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
-                        <div class="media media-left feature">
+                        <div class="media text-right feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-cogs fa-2x"></i>
                             </a>
@@ -285,7 +347,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media media-left feature">
+                        <div class="media text-right feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-envelope fa-2x"></i>
                             </a>
@@ -294,7 +356,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media media-left feature">
+                        <div class="media text-right feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-users fa-2x"></i>
                             </a>
@@ -303,7 +365,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media media-left feature">
+                        <div class="media text-right feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-comments fa-2x"></i>
                             </a>
@@ -312,7 +374,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media media-left feature">
+                        <div class="media text-right feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-calendar fa-2x"></i>
                             </a>
@@ -323,7 +385,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="img/berry/iphone-berry.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="assets/img/berry/iphone-berry.png" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
@@ -481,31 +543,31 @@
                 </div>
                 <div class="slider filtering scrollpoint sp-effect5" >
                     <div class="one">
-                        <img src="img/berry/screens/profile.jpg" alt="">
+                        <img src="assets/img/berry/screens/profile.jpg" alt="">
                         <h4>Profile Page</h4>
                     </div>
                     <div class="two">
-                        <img src="img/berry/screens/menu.jpg" alt="">
+                        <img src="assets/img/berry/screens/menu.jpg" alt="">
                         <h4>Toggel Menu</h4>
                     </div>
                     <div class="three">
-                        <img src="img/berry/screens/weather.jpg" alt="">
+                        <img src="assets/img/berry/screens/weather.jpg" alt="">
                         <h4>Weather Forcast</h4>
                     </div>
                     <div class="one">
-                        <img src="img/berry/screens/signup.jpg" alt="">
+                        <img src="assets/img/berry/screens/signup.jpg" alt="">
                         <h4>Sign Up</h4>
                     </div>
                     <div class="one">
-                        <img src="img/berry/screens/calendar.jpg" alt="">
+                        <img src="assets/img/berry/screens/calendar.jpg" alt="">
                         <h4>Event Calendar</h4>
                     </div>
                     <div class="two">
-                        <img src="img/berry/screens/options.jpg" alt="">
+                        <img src="assets/img/berry/screens/options.jpg" alt="">
                         <h4>Some Options</h4>
                     </div>
                     <div class="three">
-                        <img src="img/berry/screens/sales.jpg" alt="">
+                        <img src="assets/img/freeze/screens/sales.jpg" alt="">
                         <h4>Sales Analysis</h4>
                     </div>
                 </div>
@@ -540,7 +602,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="hanging-phone scrollpoint sp-effect2 hidden-xs">
-                            <img src="img/berry/berry-angled2.png" alt="">
+                            <img src="assets/img/freeze/freeze-angled2.png" alt="">
                         </div>
                         <div class="platforms">
                             <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
@@ -625,7 +687,7 @@
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
-                    <img src="img/berry/logo.png" alt="" class="logo">
+                    <img src="assets/img/berry/logo.png" alt="" class="logo">
                 </a>
                 <div class="social">
                     <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
@@ -639,18 +701,23 @@
             </div>
         </footer>
 
+        
+
     </div>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/placeholdem.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/placeholdem.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script>
         $(document).ready(function() {
             appMaster.preLoader();
+            $('.home-ad .close').on('click', function(){
+                $(this).parent().toggle('fast');
+            });
         });
     </script>
 </body>

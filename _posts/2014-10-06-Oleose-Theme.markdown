@@ -11,7 +11,7 @@ categories: one-page landing-page featured popular
 
 tags: bootstrap css3 landing-page mobile-app one-page bootstrap3 html5
 
-download_link: "/downloads/Oleose.zip"
+download_link: "https://github.com/ScoopThemes/Oleose/archive/master.zip"
 
 preview_link: "/templates/Oleose/"
 
@@ -35,6 +35,14 @@ Oleose is an incredibly eye catching and fully responsive Bootstrap 3 Template f
 + Three Free Logo PSD.
 + Mobile Mockups.
 + Built With LESS.
-+ Well Documented.
++ Well Documented <a href="/docs/oleose">Docs Here</a>.
 + SEO Friendly.
 + W3C Valid HTML5.
+
+### Changelog - V1.2 ###
+
++ Bootstrap update 3.3.2
++ Mobile menu disapear on link click
++ Changing colors now easier
++ Better project structure
++ Bug fixes
