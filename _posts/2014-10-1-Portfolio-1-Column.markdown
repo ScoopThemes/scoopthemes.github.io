@@ -13,7 +13,7 @@ tags: bootstrap css3 portfolio web-starter bootstrap3 one-column
 
 download_link: "/downloads/portfolio-1.zip"
 
-preview_link: "/templates/portfolio-1-column/"
+preview_link: "/templates/portfolio-one-column/"
 
 git_repo: "https://github.com/ScoopThemes/portfolio-1.git"
 
