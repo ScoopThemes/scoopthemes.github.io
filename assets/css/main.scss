@@ -695,8 +695,49 @@ article{
 	border:none;
 }
 
-
-
+@media screen and (max-width:768px){
+	.st-jumbo .jumbo-md{
+		width: 100%;
+		font-size: 20px;
+	}
+	.st-jumbo .jumbo-number{
+		font-size: 25px;
+	}
+	.home-ad div#carbonads .carbon-text{
+		width:220px;
+	}
+	.navbar .navbar-brand img{
+		height: 35px;
+	}
+	.navbar .navbar-brand{
+		padding-top:10px;
+	}
+	.navbar-toggle{
+		margin-top: 10px;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+		background-color: transparent;
+	}
+	.navbar .navbar-nav > li > a{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.navbar-collapse{
+		background-color: $brand-primary;
+	}
+	.navbar-nav.social-links li{
+		display: inline-block;
+	}
+}
+@media screen and (max-width:400px){
+	.home-ad div#carbonads .carbon-text{
+		width:185px;
+	}
+	.home-ad div#carbonads{
+		margin: 0 15px;
+		margin-top:40px;
+	}
+}
 
 
 
