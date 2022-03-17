@@ -14,7 +14,7 @@ Items and every thing here built with all the love in the world, we hope you enj
 
 ### Who Crafted Scoop Themes - {{ site.author }} ###
 
-Front-end Engineer, Nerd ! nah i'm good, I just love what i do, and love to help the community in my spare time. hopefully to meet everyone expectations, my passion in Javascript, UI stuff, NodeJs, AngularJS, and i am trying to keep the track going but it's a long run. follow me if you like <span class="fa fa-twitter"></span> [@mShaaban0](http://www.twitter.com/mshaaban0)
+Front-end Engineer, Nerd ! nah i'm good, I just love what i do, and love to help the community in my spare time. hopefully to meet everyone expectations, my passion in Javascript, UI stuff, NodeJs, AngularJS, and i am trying to keep the track going but it's a long run. follow me if you like <span class="fa fa-twitter"></span> [@1moex](http://www.twitter.com/1moex)
 
 ### Why ScoopThemes ###
 
